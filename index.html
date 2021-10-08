@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-8WRH1G7SZP"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        window.dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-8WRH1G7SZP");
+    </script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eze Promise</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="logo">Welcome</h1>
+        <button class="menu" id="menuButton">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <nav>
+          <ul class="navbar">
+            <li class="nav-items"><a href="#works">Portfolio</a></li>
+            <li class="nav-items"><a href="#about">About</a></li>
+            <li class="nav-items"><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <section class="headline">
+        <div class="intro">
+          <h1>
+            Hey there. I’m Promise
+            <span class="title">I’m a software developer</span>
+          </h1>
+          <p class="more-info">
+            I can help you build a product , feature or website Look through
+            some of my work and experience! If you like what you see and have a
+            project you need coded, don’t hestiate to contact me.
+          </p>
+          <div class="socials">
+            <img class="icon" alt="twitter" src="./img/twitter.png" />
+            <img class="icon" alt="linkedin" src="./img/linkedin.png" />
+            <img class="icon" alt="medium" src="./img/medium.png" />
+            <img class="icon" alt="github" src="./img/github.png" />
+            <img class="icon" alt="angellist" src="./img/angellist.png" />
+          </div>
+        </div>
+      </section>
+
+      <div class="go-to-works">
+        <a href="#works"><img src="./img/arrow.png" alt="arrow" /></a>
+      </div>
+
+      <section id="works" class="grid">
+        <h2>My Recent Works</h2>
+        <hr />
+        <!-- Projects are shown dynamically -->
+      </section>
+
+      <section id="about" class="grid">
+        <div class="card">
+          <h2>About me</h2>
+          <img class="about-img" src="./img/about.svg" alt="about-img" />
+          <img class="about-img2" src="./img/about2.svg" alt="about-img" />
+          <p>
+            I can help you build a product , feature or website Look through
+            some of my work and experience! If you like what you see and have a
+            project you need coded, don’t hestiate to contact me.
+          </p>
+          <button type="button" class="btn get-resume">Get My Resume</button>
+        </div>
+
+        <div class="skill border">
+          <img src="./img/languages.png" class="skill-icon" alt="languages" />
+          <h2>Languages</h2>
+          <ul class="skill-tech-group">
+            <li class="skill-tech">Nodejs</li>
+            <li class="skill-tech">css</li>
+            <li class="skill-tech">Javascript</li>
+            <li class="skill-tech">html</li>
+          </ul>
+        </div>
+        <div class="skill border">
+          <img src="./img/frameworks.png" class="skill-icon" alt="frameworks" />
+          <h2>Frameworks</h2>
+          <ul class="skill-tech-group">
+            <li class="skill-tech">Bootstrap</li>
+            <li class="skill-tech">Ruby on rails</li>
+            <li class="skill-tech">RSpec</li>
+            <li class="skill-tech">Capybara</li>
+            <li class="skill-tech">Selenium</li>
+          </ul>
+        </div>
+        <div class="skill border">
+          <img src="./img/skills.png" class="skill-icon" alt="skills" />
+          <h2>Skills</h2>
+          <ul class="skill-tech-group">
+            <li class="skill-tech">Codekit</li>
+            <li class="skill-tech">Github</li>
+            <li class="skill-tech">Codepen</li>
+            <li class="skill-tech">Gitlab</li>
+            <li class="skill-tech">Terminal</li>
+          </ul>
+        </div>
+      </section>
+      <section id="contact" class="contact-section">
+        <p>
+          I'm always interested in hearing about new projects, so if you'd like
+          to chat please get in touch.
+        </p>
+        <form
+          method="POST"
+          action="https://formspree.io/f/mrgrjoyw"
+          id="submitForm"
+          onsubmit="return validateForm(this)"
+        >
+          <input
+            type="text"
+            name="name"
+            id="name"
+            maxlength="30"
+            placeholder="John Doe"
+            required
+            oninput="onChangeInputHandler(this)"
+          />
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="john@example.com"
+            required
+            oninput="onChangeInputHandler(this)"
+
+          />
+          <span class="emailError" id="emailError"></span>
+          <textarea
+            maxlength="500"
+            name="message"
+            id="message"
+            placeholder="Enter text here"
+            cols="50"
+            rows="10"
+            required
+            oninput="onChangeInputHandler(this)"
+
+          ></textarea>
+          <button class="btn" type="submit">Get in touch</button>
+        </form>
+        <img
+          class="contact-area-img"
+          src="./img/contact-image.svg"
+          alt="contact-image1"
+        />
+        <img
+          class="contact-area-img2"
+          src="./img/contact-image2.svg"
+          alt="contact-image2"
+        />
+        <img
+          class="contact-area-img3"
+          src="./img/contact-image3.svg"
+          alt="contact-image3"
+        />
+        <img
+          class="contact-area-img4"
+          src="./img/contact-mobile.svg"
+          alt="contact-mobile"
+        />
+
+        <div class="socials">
+          <img class="icon" alt="twitter" src="./img/twitter.png" />
+          <img class="icon" alt="linkedin" src="./img/linkedin.png" />
+          <img class="icon" alt="medium" src="./img/medium.png" />
+          <img class="icon" alt="github" src="./img/github.png" />
+          <img class="icon" alt="angellist" src="./img/angellist.png" />
+        </div>
+        <a class="email" href="mailto:pezechigozirim@gmail.com"
+          >pezechigozirim@gmail.com</a
+        >
+        <hr class="bottom-bar" />
+      </section>
+    </div>
+    <div id="mobileMenuCover" class="mobileMenuCover">
+      <div class="insideContainer">
+        <div class="firstContainer">
+          <span id="closeButton" class="closeButton">x</span>
+        </div>
+        <div>
+          <ul>
+            <li class="mobileMenuItems">
+              <a href="#works" class="mobileMenuItem-a">Porfolio</a>
+            </li>
+            <li class="mobileMenuItems">
+              <a href="#about" class="mobileMenuItem-a">About</a>
+            </li>
+            <li class="mobileMenuItems">
+              <a href="#contact" class="mobileMenuItem-a">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="projectDetailsModal gray">
+      <div class="innerDiv">
+        <button class="close-modal-button">X</button>
+        <div class="modal-card">
+          <img
+            src="./img/rephidim.PNG"
+            alt="smartfacedetector"
+            class="modal-img"
+            id="modal-img"
+          />
+          <div class="details-without-img">
+            <div>
+              <h4 class="title-modal-align" id="modal-title"></h4>
+            </div>
+            <ul class="projectDetailsModalTechGroup" id="modal-tech"></ul>
+            <div class="project-description" id="modal-desc"></div>
+            <div class="modalButtons">
+              <button class="btn modal-button" type="submit">
+                See Live
+                <img class="modal-button-img" src="./img/live-icon.png" alt="live"/>
+              </button>
+              <button class="btn modal-button" type="submit">
+                See Source
+                <img class="modal-button-img" src="./img/github-white.png" alt="source"/>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/formValidation.js"></script>
+  </body>
+</html>
